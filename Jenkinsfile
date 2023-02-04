@@ -6,12 +6,13 @@ pipeline {
     stages {
         stage('git checkout') {
             steps {
-                git 'https://github.com/Y-Deekshith/React_project.git'
+                git 'https://github.com/Y-Deekshith/SnapShot.git'
                 sh 'ls -al'
             }
         }
         stage('Build stage') {
             steps {
+                sh 'yarn add typescript'
                 sh 'yarn install'
             }
         }
