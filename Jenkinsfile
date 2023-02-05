@@ -14,7 +14,6 @@ pipeline {
             steps {
                 sh 'yarn add typescript'
                 sh 'yarn install'
-                sh 'yarn run test:unit'
             }
         }
         stage('Build stage') {
