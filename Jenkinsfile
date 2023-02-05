@@ -21,5 +21,12 @@ pipeline {
                 sh 'yarn run build'
             }
         }
+        stage('start stage') {
+            steps {
+                sh 'yarn start'
+                sh 'sleep 30'
+                sh 'exit'
+            }
+        }
     }
 }
