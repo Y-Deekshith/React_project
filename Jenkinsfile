@@ -1,8 +1,8 @@
 pipeline {
-    agent any 
-    // { 
-    //     label 'PROD' 
-    // }
+    agent 
+    { 
+        label 'PROD' 
+    }
     stages {
         stage('git checkout') {
             steps {
@@ -10,15 +10,15 @@ pipeline {
                 sh 'ls -al'
             }
         }
-        stage('Build stage') {
+        stage('Install stage') {
             steps {
                 sh 'yarn add typescript'
                 sh 'yarn install'
             }
         }
-        stage('Start stage') {
+        stage('Build stage') {
             steps {
-                sh 'yarn start'
+                sh 'yarn run build'
             }
         }
     }
