@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Install stage') {
             steps {
-                sh 'yarn add typescript'
+                //sh 'yarn add typescript'
                 sh 'yarn install'
             }
         }
